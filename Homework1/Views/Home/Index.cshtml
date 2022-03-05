@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+   
+}
+@model IndexViewModel
+<html>
+<head>
+
+</head>
+
+<body>
+@*    <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+                   @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label asp-for=Name ></label>
+                    @Html.TextBoxFor(x => x.Name, new {@class = "fadeIn second", placeholder = "Ad"})
+                    @Html.ValidationMessageFor(x => x.Name, null, new {@class = "invalid-feedback d-block"})
+
+                     <label asp-for=SurName ></label>
+                    @Html.TextBoxFor(x => x.SurName, new {@class = "fadeIn second", placeholder = "Soyad"})
+                    @Html.ValidationMessageFor(x => x.SurName, null, new {@class = "invalid-feedback d-block"})
+
+                     <label asp-for=EPosta ></label>
+                    @Html.TextBoxFor(x => x.EPosta, new {@class = "fadeIn second", placeholder = "Eposta"})
+                    @Html.ValidationMessageFor(x => x.EPosta, null, new {@class = "invalid-feedback d-block"})
+
+                     <label asp-for=Password ></label>
+                    @Html.TextBoxFor(x => x.Password, new {@class = "fadeIn second", placeholder = "Şifre", @type="Password"})
+                    @Html. @Html.ValidationMessageFor(x => x.Password, null, new {@class = "invalid-feedback d-block"})
+                </div>
+                <button class="btn login_btn" type="submit">Kaydet</button>
+                <div>
+                   @Html.Raw(ViewData["message"])
+                </div>
+            }
+        </div>
+    </div>
+    *@
+</body>
+
+</html>

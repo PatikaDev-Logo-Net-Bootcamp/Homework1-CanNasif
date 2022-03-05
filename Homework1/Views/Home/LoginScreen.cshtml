@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IndexViewModel
+<link href="" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+	
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+
+</head>
+<!--Coded with love by Mutiullah Samim-->
+<body>
+	<div class="container h-200">
+		<div class="d-flex justify-content-center">
+
+
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+					<img 
+					src="https://media-exp1.licdn.com/dms/image/C4D03AQFZA1MzIOrbQA/profile-displayphoto-shrink_200_200/0/1645642223560?e=1651708800&amp;v=beta&amp;t=LoWl6-TnUHUnWRPY0fZxriQ0MmIMwO8yYCRoKHbIVRw" 
+					alt="Can Nasıf" class="brand_logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+					
+					<form method="post">
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user" >  <label asp-for=Name ></label></i></span>
+							</div>
+							
+							<input type="text" class="form-control input_user"  asp-for=Name placeholder="İsim Giriniz.">
+							<div class="input-group mb-1"> <span asp-validation-for=Name ></span>  </div>
+							
+						</div>
+
+							<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"> <label asp-for=SurName ></label></i></span>
+							</div>
+						
+							<input type="text"  class="form-control input_user"  asp-for=SurName placeholder="Soyadı Giriniz.">
+							<div class="input-group mb-1"> <span asp-validation-for=SurName ></span>  </div>
+						</div>
+
+
+							<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-envelope"> <label asp-for=EPosta ></label></i></span>
+							</div>
+						
+							<input type="text" class="form-control input_user" asp-for=EPosta placeholder="E-Posta Giriniz.">
+							<div class="input-group mb-1"> <span asp-validation-for=EPosta ></span>  </div>
+						</div>
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"> <label asp-for=Password ></label></i></span>
+							</div>
+						
+							<input  class="form-control input_user" asp-for=Password placeholder="Şifre Giriniz.">
+							<div class="input-group mb-1"> <span asp-validation-for=Password ></span>  </div>
+						</div>
+						
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="submit" name="button" class="btn login_btn">Giriş Yap</button>
+				   </div>
+					</form>
+				</div>
+		
+							
+				</div>
+			</div>
+		</div>
+
+				<div style="text-align: center;">
+					<center>
+				 <div class="d-flex justify-content-center mt-3" style="background: #f39c12; width:400px;">
+                   @Html.Raw(ViewData["message"])
+                </div>
+				</center>
+				</div>
+
+</body>
+</html>
